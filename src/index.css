@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@media screen and (min-width: 1024px) {
+  #burger-btn {
+    display: none;
+  }
+}
+
+.isFavorite {
+  width: 40px;
+  height: 40px;
+  background-image: url('./assets/red-heart.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.notFavorite {
+  width: 40px;
+  height: 40px;
+  background-image: url('./assets/empty-heart.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.isPetFavorite {
+  width: 40px;
+  height: 40px;
+  background-image: url('./assets/red-heart-paw.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.notPetFavorite {
+  width: 40px;
+  height: 40px;
+  background-image: url('./assets/empty-heart-paw.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+:root {
+  --dark-grey: #dbedf3;
+  --darker-grey: #a0d3e4;
+  --bg-primary: var(--darker-grey);
+  --bg-secondary: var(--dark-grey);
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  background: linear-gradient(
+    135deg,
+    var(--bg-secondary) 0%,
+    var(--bg-primary) 100%
+  );
+  background-size: 500% 500%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
